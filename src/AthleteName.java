@@ -28,6 +28,12 @@ public class AthleteName {
     public String getWeightCategory(){
         return weightCategory;
     }
+    public void setCurrentWeight(String currentWeight){
+        this.currentWeight = currentWeight;
+    }
+    public String getCurrentWeight(){
+        return currentWeight;
+    }
 
 
 

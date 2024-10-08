@@ -15,6 +15,8 @@ public class Main {
         myAthleteName.setName(yourName);
 
         TrainingPlan2.display2();
-
+        System.out.println(" ");
+        System.out.println(" ");
+        Weight.weightDisplay();
     }
 }
