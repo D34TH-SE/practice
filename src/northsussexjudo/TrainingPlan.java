@@ -53,14 +53,17 @@ public class TrainingPlan {
         while (true) {
 
             System.out.println("Enter your hour for private coaching: ");
-            CoachingHours = sc1.nextDouble();
 
-            if(CoachingHours <= 5){
+
+            if(CoachingHours <= 5 && sc1.hasNextDouble()) {
                 System.out.println("Coaching Hours Processing.....");
+                CoachingHours = sc1.nextDouble();
                 break;
             }else{
                 System.out.println("----ERROR---- Invalid Input Try Again");
+
             }
+
         }
     }
     public String getPlanLevel(){

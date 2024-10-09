@@ -59,6 +59,22 @@ public class AthletesProfile {
     public void EnterCurrentWeight(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your Current Weight");
-        currentWeight = input.nextDouble();
+
+        while(true){
+
+            if(input.hasNextDouble()){
+               currentWeight = input.nextDouble();
+               break;
+            }else{
+                System.out.println("Invalid Input Try Again");
+                input.next();
+                break;
+            }
+
+        }
+
+    }
+    public void ComparedWeight(){
+        System.out.println("Your weight category is: " + weightCategory + "and" +  "Your current weight is:" + currentWeight);
     }
 }

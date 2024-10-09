@@ -17,7 +17,9 @@ public class Main {
 
         trainingPlan.PrivateCoaching();
         totalCost.calculateCost(trainingPlan,competition);
-        totalCost.
+        totalCost.DisplayTotalCost();
+
+        athletesProfile.ComparedWeight();
 
 
     }
