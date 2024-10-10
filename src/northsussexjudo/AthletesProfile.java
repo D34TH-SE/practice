@@ -14,6 +14,8 @@ public class AthletesProfile {
     }
     public void inputWeightCategory(){
         Scanner input = new Scanner(System.in);
+        int choice;
+
         while (true){
             System.out.println("Select your weight category: ");
             System.out.println("1. Lightweight");
@@ -22,38 +24,44 @@ public class AthletesProfile {
             System.out.println("4. Light-Middleweight");
             System.out.println("5. Flyweight");
             System.out.println("6. Light-Heavyweight");
-            int choice = input.nextInt();
 
-            switch(choice){
-                case 1:
-                weightCategory = "Lightweight";
-                    System.out.println("You choose \"Lightweight\"");
-                    break;
-                case 2:
-                    weightCategory = "Middleweight";
-                    System.out.println("You choose \"Middleweight\"");
-                    break;
-                case 3:
-                    weightCategory = "Heavyweight";
-                    System.out.println("You choose \"Heavyweight\"");
-                    break;
-                case 4:
-                    weightCategory = "Light-Middleweight";
-                    System.out.println("You choose \"Light-Middleweight\"");
-                    break;
-                case 5:
-                    weightCategory = "Flyweight";
-                    System.out.println("You choose \"Flyweight\"");
-                    break;
-                case 6:
-                    weightCategory = "Light-Heavyweight";
-                    System.out.println("You choose \"Light-Heavyweight\"");
-                    break;
-                default:
-                    System.out.println("Invalid Input Try Again");
-                    continue;
+            if(input.hasNextInt()) {
+                choice = input.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        weightCategory = "Lightweight";
+                        System.out.println("You choose \"Lightweight\"");
+                        break;
+                    case 2:
+                        weightCategory = "Middleweight";
+                        System.out.println("You choose \"Middleweight\"");
+                        break;
+                    case 3:
+                        weightCategory = "Heavyweight";
+                        System.out.println("You choose \"Heavyweight\"");
+                        break;
+                    case 4:
+                        weightCategory = "Light-Middleweight";
+                        System.out.println("You choose \"Light-Middleweight\"");
+                        break;
+                    case 5:
+                        weightCategory = "Flyweight";
+                        System.out.println("You choose \"Flyweight\"");
+                        break;
+                    case 6:
+                        weightCategory = "Light-Heavyweight";
+                        System.out.println("You choose \"Light-Heavyweight\"");
+                        break;
+                    default:
+                        System.out.println("Invalid Input Try Again");
+                        continue;
+                }
+                break;
+            }else{
+                System.out.println("Invalid Input " + "[Enter only (1,2,3,4,5,6)] ");
+                input.next();
             }
-            break;
         }
     }
     public void EnterCurrentWeight(){
@@ -68,13 +76,12 @@ public class AthletesProfile {
             }else{
                 System.out.println("Invalid Input Try Again");
                 input.next();
-                break;
             }
 
         }
 
     }
     public void ComparedWeight(){
-        System.out.println("Your weight category is: " + weightCategory + "and" +  "Your current weight is:" + currentWeight);
+        System.out.println("Your weight category is: " + weightCategory + " and " +  " Your current weight is: " + currentWeight);
     }
 }

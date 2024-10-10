@@ -11,10 +11,13 @@ public class Main {
         TotalCost totalCost = new TotalCost();
 
         athletesProfile.inputAthleteName();
+        System.out.println(" ");
         trainingPlan.userSelectTrainingPlan();
+        System.out.println(" ");
         athletesProfile.inputWeightCategory();
+        System.out.println(" ");
         athletesProfile.EnterCurrentWeight();
-
+        System.out.println(" ");
         trainingPlan.PrivateCoaching();
         totalCost.calculateCost(trainingPlan,competition);
         totalCost.DisplayTotalCost();
