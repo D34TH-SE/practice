@@ -62,8 +62,8 @@ public class TrainingPlan {
             System.out.println("Enter your hour for private coaching: ");
 
 
-            if(sc1.hasNextDouble()){
-                CoachingHours = sc1.nextDouble();
+            if(sc1.hasNextInt()){
+                CoachingHours = sc1.nextInt();
 
                 if(CoachingHours <= 5){
                     System.out.println("Your coaching hours is: " + CoachingHours);

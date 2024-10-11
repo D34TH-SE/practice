@@ -16,7 +16,7 @@ public class Competition {
         System.out.println("Enter the competitions you entered this month");
         numberCompetition = sc2.nextInt();
 
-        competitionFee = numberCompetition * 50;
+        competitionFee = numberCompetition * 22;
 
     }
     public double getCompetitionFee(){

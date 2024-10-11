@@ -5,12 +5,28 @@ public class AthletesProfile {
 
     private String athleteName;
     private String weightCategory;
-    private double currentWeight;
+    private int currentWeight;
 
     public void inputAthleteName(){
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter Your Name: ");
-        athleteName = input.nextLine();
+        boolean nameIsValid;
+
+        do {
+            System.out.println("Enter Your Name: " + "[First Name,Last Name,Suffix]");
+            athleteName= input.nextLine();
+            nameIsValid = true;
+
+            for(int i = 0; i < athleteName.length(); i++){
+                if(Character.isDigit(athleteName.charAt(i))){
+                    nameIsValid = false;
+                    break;
+                }
+            }
+            if(!nameIsValid){
+                System.out.println("Invalid Input Try Again");
+            }
+        }while(!nameIsValid);
+        System.out.println("Proceeding.......");
     }
     public void inputWeightCategory(){
         Scanner input = new Scanner(System.in);
@@ -70,9 +86,10 @@ public class AthletesProfile {
 
         while(true){
 
-            if(input.hasNextDouble()){
-               currentWeight = input.nextDouble();
-               break;
+            if(input.hasNextInt()){
+                currentWeight = input.nextInt();
+                System.out.println("Your current weight is: " + currentWeight + "kg");
+                break;
             }else{
                 System.out.println("Invalid Input Try Again");
                 input.next();
