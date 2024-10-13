@@ -65,11 +65,11 @@ public class TrainingPlan {
             if(sc1.hasNextInt()){
                 CoachingHours = sc1.nextInt();
 
-                if(CoachingHours <= 5){
-                    System.out.println("Your coaching hours is: " + CoachingHours);
+                if(CoachingHours >= 0 && CoachingHours <= 5){
+                    System.out.println("Coaching hours is: " + CoachingHours +" Hours");
                     break;
                 }else{
-                    System.out.println("Invalid Input Try Again");
+                    System.out.println("Invalid Input Try Again,Do not enter a negative number or Higher Than (1-5)");
                 }
 
             }else{

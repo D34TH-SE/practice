@@ -9,12 +9,15 @@ public class CheckedTheDay {
     public CheckedTheDay(int day){
         this.day = day;
     }
+    private boolean correctSecondSaturday(int day){
+        return day == 13;
+    }
     private boolean validDay(int day){
         return day >= 1 && day <= 31;
     }
     public boolean isItPastSecondSaturday(){
-        int secondSaturday = 12;
-        return day >=  secondSaturday;
+        int secondSaturday = 13;
+        return day >= secondSaturday;
     }
     public void displayOfDate(){
         System.out.println("Date: " + month + " " + day + " " + year);
@@ -29,7 +32,16 @@ public class CheckedTheDay {
             if(sc2.hasNextInt()) {
                 day = sc2.nextInt();
                 if (validDay(day)) {
-                    InputIsValid = true;
+                    if(day == 13) {
+                        System.out.println("It is Second Saturday");
+                        InputIsValid = true;
+                    }else if(day > 13){
+                        System.out.println("It is past the Second Saturday");
+                        InputIsValid = true;
+                    }else{
+                        System.out.println("It is not yet past Second Saturday");
+                        InputIsValid = true;
+                    }
                 } else {
                     System.out.println("Invalid Input Try Again: [Enter only 1 to 31]");
                 }
@@ -39,6 +51,9 @@ public class CheckedTheDay {
             }
         }
 
+    }
+    public int getDay(){
+        return day;
     }
 
 }
