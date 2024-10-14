@@ -1,3 +1,4 @@
+
 package northsussexjudo;
 import java.util.*;
 
@@ -17,7 +18,7 @@ public class CheckedTheDay {
     }
     public boolean isItPastSecondSaturday(){
         int secondSaturday = 12;
-        return day >= secondSaturday;
+        return day <= secondSaturday;
     }
     public void displayOfDate(){
         System.out.println("Date: " + month + " " + day + " " + year);
@@ -40,6 +41,7 @@ public class CheckedTheDay {
                         InputIsValid = true;
                     }else{
                         System.out.println("It is not yet past Second Saturday");
+                        System.out.println("Proceed to Register the Competition....");
                         InputIsValid = true;
                     }
                 } else {

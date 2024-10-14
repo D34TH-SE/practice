@@ -59,7 +59,7 @@ public class TrainingPlan {
 
         while (true) {
 
-            System.out.println("Enter your hour for private coaching: ");
+            System.out.println("Enter your hour for private coaching: " + "[If you don't want private coaching just put (0)]"  );
 
 
             if(sc1.hasNextInt()){

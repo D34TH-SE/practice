@@ -104,7 +104,7 @@ public class AthletesProfile {
 
     }
     public void ComparedWeight(){
-        System.out.println("Your weight category is: " + weightCategory + " and " +  " Your current weight is: " + currentWeight +"kg");
+        System.out.println("Comparing Your weight category [" + weightCategory + "] vs " +  " Your current weight [" + currentWeight +"kg]");
     }
     public String getAthleteName(){
         return athleteName;

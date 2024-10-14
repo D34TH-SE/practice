@@ -36,9 +36,8 @@ public class Main {
                 System.out.println(" ");
                 checkedDay.displayOfDate();
                 if (checkedDay.isItPastSecondSaturday()) {
-                    if (checkedDay.getDay() == 12) {
-                        System.out.println("It is Second Saturday of the Month");
-                        System.out.println(" You can Enter the Competition");
+                    if (checkedDay.getDay() <= 12) {
+                        System.out.println("You can Enter the Competition");
                         competition.competitionEntered(trainingPlan.getPlanLevel());
                     } else if(checkedDay.getDay() > 13 && checkedDay.getDay() <= 21){
                         System.out.println("It is 3rd week of the month");
@@ -54,11 +53,11 @@ public class Main {
 
                 break;
             } else if (answer1.equalsIgnoreCase("no")) {
-                    System.out.println("\u001B[31m-------- Thank you! Goodbye.---------");
-                    break;
-                }else{
+                System.out.println("\u001B[31m-------- Thank you! Goodbye.---------");
+                break;
+            }else{
                 System.out.println("Invalid Input Try Again. Please enter only [yes/no]");
-                }
+            }
 
 
         }while(true);
