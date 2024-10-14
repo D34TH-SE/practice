@@ -36,7 +36,7 @@ public class Main {
                 System.out.println(" ");
                 checkedDay.displayOfDate();
                 if (checkedDay.isItPastSecondSaturday()) {
-                    if (checkedDay.getDay() == 13) {
+                    if (checkedDay.getDay() == 12) {
                         System.out.println("It is Second Saturday of the Month");
                         System.out.println(" You can Enter the Competition");
                         competition.competitionEntered(trainingPlan.getPlanLevel());

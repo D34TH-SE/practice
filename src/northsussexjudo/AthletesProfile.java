@@ -88,8 +88,13 @@ public class AthletesProfile {
 
             if(input.hasNextInt()){
                 currentWeight = input.nextInt();
-                System.out.println("Your current weight is: " + currentWeight + "kg");
-                break;
+
+                    if(currentWeight >=0) {
+                        System.out.println("Your current weight is: " + currentWeight + "kg");
+                        break;
+                    }else{
+                        System.out.println("Invalid Input Don't Enter Negative Number");
+                    }
             }else{
                 System.out.println("Invalid Input Try Again");
                 input.next();

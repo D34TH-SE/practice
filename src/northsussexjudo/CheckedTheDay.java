@@ -16,7 +16,7 @@ public class CheckedTheDay {
         return day >= 1 && day <= 31;
     }
     public boolean isItPastSecondSaturday(){
-        int secondSaturday = 13;
+        int secondSaturday = 12;
         return day >= secondSaturday;
     }
     public void displayOfDate(){
@@ -32,10 +32,10 @@ public class CheckedTheDay {
             if(sc2.hasNextInt()) {
                 day = sc2.nextInt();
                 if (validDay(day)) {
-                    if(day == 13) {
+                    if(day == 12) {
                         System.out.println("It is Second Saturday");
                         InputIsValid = true;
-                    }else if(day > 13){
+                    }else if(day > 12){
                         System.out.println("It is past the Second Saturday");
                         InputIsValid = true;
                     }else{

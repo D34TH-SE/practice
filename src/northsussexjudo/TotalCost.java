@@ -15,7 +15,7 @@ public class TotalCost {
         System.out.println("===== Total Cost =====");
 
         System.out.println("Your Name: " + athletesProfile.getAthleteName());
-        System.out.printf("Training Plan Fee : $%.2f\n",trainingPlan.getPlanFee());
+        System.out.printf("Training Plan Fee (%s): $%.2f\n",trainingPlan.getPlanLevel(), trainingPlan.getPlanFee());
         System.out.printf("Competition Fee : $%.2f\n",competition.getCompetitionFee());
         System.out.printf("Coaching Hours Fee : $%.2f\n",trainingPlan.getCoachingHours()*9) ;
         System.out.printf("Total Cost : $%.2f\n",totalCost);
