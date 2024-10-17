@@ -14,20 +14,30 @@ public class AthletesProfile {
         do {
             System.out.println("Enter Your Name: " + "[First Name,Last Name,Suffix]");
             athleteName= input.nextLine();
-            nameIsValid = true;
+            nameIsValid = validationName(athleteName);
 
-            for(int i = 0; i < athleteName.length(); i++){
-                if(Character.isDigit(athleteName.charAt(i))){
-                    nameIsValid = false;
-                    break;
-                }
-            }
             if(!nameIsValid){
                 System.out.println("Invalid Input Try Again");
             }
         }while(!nameIsValid);
         System.out.println("Proceeding.......");
     }
+    private boolean validationName(String input){
+        boolean hasNumbers = false;
+        boolean hasSymbols = false;
+
+        for (char ch : input.toCharArray()) {
+
+            if (Character.isDigit(ch)) {
+                hasNumbers = true;
+            }
+            else if (!Character.isLetter(ch) && !Character.isWhitespace(ch)) {
+                hasSymbols = true;
+            }
+        }
+        return !hasNumbers && !hasSymbols;
+    }
+
     public void inputWeightCategory(){
         Scanner input = new Scanner(System.in);
         int choice;
