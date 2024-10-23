@@ -3,21 +3,24 @@ import java.util.*;
 
 public class TrainingPlan {
 
+    // Private fields to store training plan level, private coaching hours, and Training plan fee
     private String PlanLevel;
     private double CoachingHours;
     private double PlanFee;
 
-    public void userSelectTrainingPlan(){
+    // Methods for selecting a training plan
+    public void userSelectTrainingPlan() {
         Scanner sc = new Scanner(System.in);
         int choice1;
 
-        while(true){
+        // Loop to ensure a valid choice is made
+        while (true) {
             System.out.println("Select you Training Plan");
             System.out.println("1. Beginner");
             System.out.println("2. Intermediate");
             System.out.println("3. Elite");
 
-            if(sc.hasNextInt()) {
+            if (sc.hasNextInt()) {
                 choice1 = sc.nextInt();
 
                 switch (choice1) {
@@ -38,12 +41,12 @@ public class TrainingPlan {
                         break;
                     default:
                         System.out.println(" Invalid Input Try Again");
-                        continue;
+                        continue; // Repeats the loop if the input is 1,2 or 3
 
                 }
-                break;
+                break;  // Exit loop if a valid option is chosen
 
-            }else{
+            } else {
                 System.out.println("Invalid Input " + "[Enter only (1,2,3)]");
                 sc.next();
             }
@@ -53,6 +56,7 @@ public class TrainingPlan {
 
 
     }
+    // Method for entering private coaching hours
     public void PrivateCoaching(){
 
         Scanner sc1 = new Scanner(System.in);
@@ -62,23 +66,25 @@ public class TrainingPlan {
             System.out.println("Enter your hour for private coaching: " + "[If you don't want private coaching just put (0)]"  );
 
 
-            if(sc1.hasNextInt()){
+            if (sc1.hasNextInt()) {
                 CoachingHours = sc1.nextInt();
 
-                if(CoachingHours >= 0 && CoachingHours <= 5){
+                // Checks if the coaching hours are within the acceptable range
+                if (CoachingHours >= 0 && CoachingHours <= 5) {
                     System.out.println("Coaching hours is: " + CoachingHours +" Hours");
                     break;
-                }else{
+                } else {
                     System.out.println("Invalid Input Try Again,Do not enter a negative number or Higher Than (1-5)");
                 }
 
-            }else{
+            } else {
                 System.out.println("Invalid input not a number ");
                 sc1.next();
             }
 
         }
     }
+    // Getter methods to access private fields outside this class
     public String getPlanLevel(){
         return PlanLevel;
     }

@@ -2,8 +2,11 @@ package northsussexjudo;
 
 public class Greetings {
 
-    public static void WelcomeMessages(){
+    // Static method to display welcome messages, rules and fees
+    public static void WelcomeMessages() {
         System.out.println(" ");
+
+        // Display the welcome messages for the program
         System.out.println("========================================");
         System.out.println("===== WELCOME TO NORTH SUSSEX JUDO =====");
         System.out.println("========================================");
