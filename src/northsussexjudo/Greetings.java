@@ -2,6 +2,7 @@ package northsussexjudo;
 
 public class Greetings {
 
+    // Print to Display in main method The Welcome Message and the Training Plan
     public static void WelcomeMessages(){
         System.out.println(" ");
         System.out.println("========================================");

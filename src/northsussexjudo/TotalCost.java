@@ -2,12 +2,14 @@ package northsussexjudo;
 
 public class TotalCost {
 
-    private double totalCost;
+    private double totalCost;  // Stores the total cost of all selected services
 
+       // Method to calculate the total cost based on the training plan and competition fee
         public void calculateCost(TrainingPlan trainingPlan,Competition competition){
             totalCost = trainingPlan.getPlanFee()*4+ competition.getCompetitionFee() + (trainingPlan.getCoachingHours()*9);
     }
 
+    // Method to display detailed breakdown of the total cost
     public void DisplayTotalCost(TrainingPlan trainingPlan, Competition competition,AthletesProfile athletesProfile){
 
 
